@@ -1,0 +1,64 @@
+.section {
+  background: #f5f6f7;
+  padding: 30px 0;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* underline accent */
+.heading::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #0d6efd;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 3px;
+}
+
+/* card */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 22px;
+  height: 100%;
+  transition: .3s;
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.1);
+}
+
+/* icon */
+.icon {
+  font-size: 34px;
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+.card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+  min-height: 55px;
+}
+
+.link {
+  color: #0d6efd;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+}

@@ -1,0 +1,47 @@
+.mobileBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  z-index: 9999;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* each button */
+.mobileBar a {
+  flex: 1;
+  padding: 12px 5px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+}
+
+/* colors */
+.call {
+  background: #0d6efd;
+}
+
+.query {
+  background: #1f5fa8;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+/* icons */
+.mobileBar svg {
+  font-size: 16px;
+}
+
+/* show only mobile */
+@media (max-width: 768px) {
+  .mobileBar {
+    display: flex;
+  }
+}

@@ -1,0 +1,111 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  padding: 18px 0;
+  transition: .3s;
+  color: white;
+}
+
+/* scroll effect */
+.scrolled {
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+  color: black;
+}
+
+/* logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+}
+
+.menu li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.phone {
+  border: 1px solid currentColor;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+   background: var(--bs-primary);
+   color: #fff !important;
+   text-decoration: none;
+}
+
+.cta {
+  background: var(--bs-primary);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+}
+
+/* mobile toggle */
+.toggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* mobile menu */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobileMenu a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.show {
+  display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+
+  .menu {
+    display: none;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,33 @@
+.contact {
+  background: #f4f7fb;
+  padding: 30px 0;
+}
+
+/* image */
+.image {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+/* form card */
+.card {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.08);
+}
+
+/* focus effect */
+.card input:focus,
+.card textarea:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 .15rem rgba(13,110,253,.15);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+}
