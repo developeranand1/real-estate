@@ -1,6 +1,7 @@
 "use client"
 import styles from "./Contact.module.css"
 import { useState } from "react"
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
 
 export default function Contact() {
 
@@ -23,7 +24,7 @@ export default function Contact() {
   const handleSubmit = e => {
     e.preventDefault()
     console.log(form)
-    alert("Form Submitted")
+    alert("Thank you! Our team will contact you shortly.")
   }
 
   return (
@@ -32,90 +33,105 @@ export default function Contact() {
       <div className="container">
         <div className="row align-items-center g-5">
 
-          {/* LEFT IMAGE */}
-          <div className="col-lg-6">
-            <img src="https://godrejhomez.com/gurgaon/godrej-sector-53/images/contact_us.webp" className={styles.image} alt="contact"/>
+          {/* LEFT SIDE INFO */}
+          <div className="col-lg-5">
+            <div className={styles.infoBox}>
+              <h2>Let’s Connect</h2>
+              <p>
+                Have questions about our projects? Our property experts
+                are here to guide you through every step.
+              </p>
+
+              <div className={styles.contactItem}>
+                <FaPhoneAlt />
+                <span>+91 98765 43210</span>
+              </div>
+
+              <div className={styles.contactItem}>
+                <FaEnvelope />
+                <span>support@m3mhomes.com</span>
+              </div>
+
+              <div className={styles.contactItem}>
+                <FaMapMarkerAlt />
+                <span>
+                  Golf Course Extension Road,<br />
+                  Gurgaon, Haryana
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* RIGHT FORM */}
-          <div className="col-lg-6">
+          <div className="col-lg-7">
             <div className={styles.card}>
 
-              <h2 className="text-primary text-center mb-4">
-                Get In Touch
-              </h2>
+              <h3 className={styles.formTitle}>Request a Call Back</h3>
 
               <form onSubmit={handleSubmit}>
 
-                <div className="mb-3">
+                <div className={styles.inputGroup}>
                   <input
                     type="text"
                     name="name"
-                    placeholder="Full Name"
-                    className="form-control"
+                    required
                     value={form.name}
                     onChange={handleChange}
-                    required
                   />
+                  <label>Full Name</label>
                 </div>
 
-                <div className="mb-3">
+                <div className={styles.inputGroup}>
                   <input
                     type="email"
                     name="email"
-                    placeholder="Email Address"
-                    className="form-control"
+                    required
                     value={form.email}
                     onChange={handleChange}
-                    required
                   />
+                  <label>Email Address</label>
                 </div>
 
-                <div className="input-group mb-3">
-                  <span className="input-group-text bg-secondary text-white">
-                    +91
-                  </span>
+                <div className={styles.inputGroup}>
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="Mobile Number"
-                    className="form-control"
+                    required
                     value={form.phone}
                     onChange={handleChange}
-                    required
                   />
+                  <label>Mobile Number</label>
                 </div>
 
-                <div className="mb-3">
+                <div className={styles.inputGroup}>
                   <textarea
                     name="message"
                     rows="3"
-                    placeholder="Tell us about your requirement"
-                    className="form-control"
+                    required
                     value={form.message}
                     onChange={handleChange}
-                    required
                   ></textarea>
+                  <label>Your Requirement</label>
                 </div>
 
-                <div className="form-check mb-3 small">
+                <div className={styles.checkbox}>
                   <input
-                    className="form-check-input"
                     type="checkbox"
                     name="consent"
                     checked={form.consent}
                     onChange={handleChange}
                   />
-                  <label className="form-check-label">
-                    I agree to receive calls, WhatsApp messages and emails regarding property updates.
-                  </label>
+                  <span>
+                    I agree to receive updates via call, WhatsApp & email.
+                  </span>
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100 py-2 fw-semibold">
+                <button type="submit" className={styles.submitBtn}>
                   Submit Enquiry
                 </button>
 
               </form>
+
             </div>
           </div>
 

@@ -8,18 +8,23 @@ import Footer from "@/components/footer/Footer";
 import Cities from "@/components/cities/Cities";
 import Header from "@/components/header/Header";
 import Tools from "@/components/tools/Tools";
+import QuoteModal from "@/components/query-box/QuoteModal";
+import ProjectSection from "@/components/home/ProjectSection";
+import BlogSection from "@/components/home/BlogSection";
 
 export default function Home() {
   return (
     <>
-    <Header/>
+    
+     <QuoteModal />
      <Hero />
      <Tools/>
        <Cities />
-     <Properties/>
+     <ProjectSection/>
      < About />
+     <BlogSection/>
      <Contact/>
-     <Footer/>
+     
     </>
   
   );

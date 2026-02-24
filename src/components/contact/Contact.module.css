@@ -1,33 +1,126 @@
 .contact {
-  background: #f4f7fb;
-  padding: 30px 0;
+  background: linear-gradient(135deg, #f3f6fb, #ffffff);
+  padding: 100px 0;
 }
 
-/* image */
-.image {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.15);
+/* LEFT INFO BOX */
+.infoBox {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(0,0,0,.15);
 }
 
-/* form card */
+.infoBox h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.infoBox p {
+  font-size: 14px;
+  opacity: .9;
+  margin-bottom: 25px;
+}
+
+.contactItem {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.contactItem svg {
+  margin-top: 4px;
+  color: #22c55e;
+}
+
+/* FORM CARD */
 .card {
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,.08);
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* FLOATING INPUT */
+.inputGroup {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+}
+
+.inputGroup label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 14px;
+  color: #6b7280;
+  transition: .3s;
+  pointer-events: none;
+}
+
+.inputGroup input:focus + label,
+.inputGroup input:not(:placeholder-shown) + label,
+.inputGroup textarea:focus + label,
+.inputGroup textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 8px;
   background: white;
-  padding: 35px 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 35px rgba(0,0,0,.08);
+  padding: 0 5px;
+  font-size: 12px;
+  color: #22c55e;
 }
 
-/* focus effect */
-.card input:focus,
-.card textarea:focus {
-  border-color: var(--bs-primary);
-  box-shadow: 0 0 0 .15rem rgba(13,110,253,.15);
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
 
-/* mobile */
-@media (max-width: 768px) {
-  .contact {
-    padding: 60px 0;
+/* BUTTON */
+.submitBtn {
+  width: 100%;
+  background: #22c55e;
+  color: #fff;
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.submitBtn:hover {
+  background: #16a34a;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .infoBox {
+    margin-bottom: 30px;
+  }
+
+  .card {
+    padding: 25px;
   }
 }

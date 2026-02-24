@@ -8,30 +8,32 @@ export default function MobileBar() {
   const message = "Hi, I am interested in your property."
 
   return (
-    <div className={styles.mobileBar}>
+    <div className={styles.mobileWrapper}>
+      <div className={styles.mobileBar}>
 
-      {/* CALL */}
-      <a href={`tel:+${phone}`} className={styles.call}>
-        <FaPhoneAlt />
-        <span>Tap to Call</span>
-      </a>
+        {/* CALL */}
+        <a href={`tel:+${phone}`} className={styles.call}>
+          <FaPhoneAlt />
+          <span>Call</span>
+        </a>
 
-      {/* QUERY */}
-      <a href="#contact" className={styles.query}>
-        <FaRegEnvelope />
-        <span>Query Now</span>
-      </a>
+        {/* QUERY */}
+        {/* <a href="#contact" className={styles.query}>
+          <FaRegEnvelope />
+          <span>Enquiry</span>
+        </a> */}
 
-      {/* WHATSAPP */}
-      <a
-        href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
-        target="_blank"
-        className={styles.whatsapp}
-      >
-        <FaWhatsapp />
-        <span>WhatsApp</span>
-      </a>
+        {/* WHATSAPP */}
+        <a
+          href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
+          target="_blank"
+          className={styles.whatsapp}
+        >
+          <FaWhatsapp />
+          <span>WhatsApp</span>
+        </a>
 
+      </div>
     </div>
   )
 }

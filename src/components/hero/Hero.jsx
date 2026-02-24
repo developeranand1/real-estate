@@ -1,33 +1,65 @@
-import styles from "./Hero.module.css"
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
+      {/* dark overlay */}
+      <div className={styles.overlay} />
 
-      {/* overlay */}
-      <div className={styles.overlay}></div>
+      <div className={`container ${styles.container}`}>
+        <div className="row align-items-center">
+          {/* LEFT CONTENT */}
+          <div className="col-lg-7">
+            <span className={styles.badge}>NEW LAUNCH</span>
 
-      {/* content */}
-      <div className={`container ${styles.content}`}>
-        <div className="row text-center text-lg-start align-items-center">
+            <h1 className={styles.title}>
+              MEFFIER <span>GARDEN</span>
+              <br />
+              <span>RESIDENCY</span>
+            </h1>
 
-          <div className="col-lg-4 mb-4">
-            <h1 className={styles.title}>Premium Living Spaces</h1>
+            <p className={styles.subtitle}>
+              Premium 2 & 3 BHK Independent Floor Residences
+            </p>
+
+            <ul className={styles.points}>
+              <li>Sector 5, Sohna, Gurgaon</li>
+              <li>45 Acres of Integrated Township</li>
+              <li>Total Units (Phase 1): 560</li>
+              <li>40,000 sq. ft. Luxury Clubhouse</li>
+              <li>Payment Plan: 40:30:30</li>
+            </ul>
+
+            <a href="#pricing" className={styles.priceBtn}>
+              ₹ 1.25 Cr* Onwards
+            </a>
           </div>
 
-          <div className="col-lg-4 mb-4">
-            <h5 className={styles.heading}>RESIDENCE TYPE</h5>
-            <p className={styles.sub}>2, 3 & 4 BHK Smart Apartments</p>
-          </div>
+          {/* RIGHT FORM */}
+          <div className="col-lg-5 mt-4 mt-lg-0">
+            <div className={styles.formCard}>
+              <div className={styles.formHeader}>ENQUIRE NOW</div>
 
-          <div className="col-lg-4">
-            <h5 className={styles.heading}>PRICE STARTS</h5>
-            <h2 className={styles.price}>₹ 1.65 Cr*</h2>
-          </div>
+              <form className={styles.formBody}>
+                <input className={styles.input} placeholder="Name" />
+                <input className={styles.input} placeholder="Phone" />
+                <input className={styles.input} placeholder="Email" />
+                <textarea
+                  className={styles.textarea}
+                  placeholder="Message"
+                  rows={4}
+                />
 
+                <button type="button" className={styles.submit}>
+                  Get Callback
+                </button>
+
+                <div className={styles.secure}>🔒 100% Secure</div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-
     </section>
-  )
+  );
 }
